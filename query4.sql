@@ -1,6 +1,6 @@
 SELECT orders.OrderID, sum(od.Quantity*od.UnitPrice*(1-od.Discount)) AS OrderTotal
 FROM orders
-RIGHT JOIN orderdetails AS od
+JOIN orderdetails AS od
 ON orders.OrderID = od.OrderID
 GROUP BY orders.OrderID
 ORDER BY orders.OrderID
